@@ -24,6 +24,14 @@ router.all('*', async (request, response, next) => {
 // GET the home landing page
 router.get('/', catchErrors(getLandingPage))
 
+  router.get('/health/v1', function (req, res, next) {
+    res.statusCode = 200  
+    res.json({status: 'UP'});
+   // res.status(200).send();
+  });
+
+
+
 // Courses routes
 router.get('/courses', catchErrors(getCourses))
 router.get('/courses/categories', catchErrors(getCourses))

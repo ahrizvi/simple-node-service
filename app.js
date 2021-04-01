@@ -43,6 +43,7 @@ app.use(function (req, res, next) {
   next()
 })
 
+
 // Set our application settings based on environment variables or query parameters
 app.use(settings)
 
